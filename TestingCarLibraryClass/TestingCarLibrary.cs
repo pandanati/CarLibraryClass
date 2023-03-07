@@ -8,8 +8,7 @@ namespace TestingCarLibraryClass
     public class TestingCarLibrary
     {
         //Assert bliver brugt her fordi klassen som er blevet brugt, er Xunit testing.
-        //Bliver brught i stedet for throw new exception [expectedexception(typeof(exception)]
-
+        //Bliver brught i stedet for throw new exception da der var problemer med den anden unit test klasse
         [Fact]
         public void TestingGetID()
         {
@@ -54,7 +53,6 @@ namespace TestingCarLibraryClass
             Assert.Equal("123A567", MyCar.Model);
         }
 
-        
         [Fact]
         public void TestingLicensePlateNoException()
         {
@@ -64,8 +62,6 @@ namespace TestingCarLibraryClass
             Assert.Same(result, MyCar.LicensePlate);
         }
         
-        
-        
         [Fact]
         public void TestingGetModel()
         {
@@ -73,8 +69,6 @@ namespace TestingCarLibraryClass
             MyCar.Model = "3J455";
             Assert.Equal("3J455", MyCar.Model);
         }
-        
-
         
         [Fact]
         public void TestingGetPrice()
@@ -86,6 +80,5 @@ namespace TestingCarLibraryClass
             var result = MyCar1.Price;
             Assert.Equal(25, result);
         }
-        
     }
 }
